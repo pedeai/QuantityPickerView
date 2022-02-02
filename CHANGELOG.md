@@ -2,6 +2,13 @@
 
 ---
 
+## [1.2.6]
+
+- Updated repository group;
+- Updated to support custom 'textColor' attribute.
+
+---
+
 ## [1.2.4]
 
 - View size will be equal to its state, in other words, _expanded.size != colapsed.size_:  
