@@ -1,12 +1,12 @@
-package com.github.guilhe
+package com.github.pedeai
 
 import android.content.res.Resources
 import android.os.Bundle
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.github.guilhe.databinding.ActivityMainBinding
-import com.github.guilhe.views.QuantityPickerView
+import com.github.pedeai.databinding.ActivityMainBinding
+import com.github.pedeai.views.QuantityPickerView
 import kotlin.math.ceil
 
 class MainActivity : AppCompatActivity() {

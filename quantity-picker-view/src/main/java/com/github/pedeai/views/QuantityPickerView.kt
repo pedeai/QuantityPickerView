@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.github.guilhe.views
+package com.github.pedeai.views
 
 import android.animation.Animator
 import android.animation.FloatEvaluator
@@ -30,7 +30,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import com.github.guilhe.views.quantitypicker.R
+import com.github.pedeai.views.quantitypicker.R
 import kotlin.math.*
 
 @Suppress("unused", "MemberVisibilityCanBePrivate", "SameParameterValue")

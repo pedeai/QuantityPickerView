@@ -6,12 +6,12 @@ A View capable of increasing or decreasing a unit value with a toggle animation.
 
 ## Installation
 
-QuantityPickerView is distributed through [Maven Central](https://search.maven.org/artifact/com.github.guilhe/quantity-picker-view), [Jcenter](https://bintray.com/gdelgado/android/quantity-picker-view) and [Jitpack](https://jitpack.io/#GuilhE/QuantityPickerView).
+QuantityPickerView is distributed through [Maven Central](https://search.maven.org/artifact/com.github.pedeai/quantity-picker-view), [Jcenter](https://bintray.com/gdelgado/android/quantity-picker-view) and [Jitpack](https://jitpack.io/#pedeai/QuantityPickerView).
 
 ```groovy
-implementation 'com.github.guilhe:quantity-picker-view:${LATEST_VERSION}'
+implementation 'com.github.pedeai:quantity-picker-view:${LATEST_VERSION}'
 ```
- [![Maven Central](https://img.shields.io/maven-central/v/com.github.guilhe/quantity-picker-view.svg)](https://search.maven.org/search?q=g:com.github.guilhe%20AND%quantity-picker-view) [![Download](https://api.bintray.com/packages/gdelgado/android/quantity-picker-view/images/download.svg)](https://bintray.com/gdelgado/android/quantity-picker-view/_latestVersion) ![Bintray](https://img.shields.io/bintray/dt/gdelgado/android/quantity-picker-view)  
+ [![Maven Central](https://img.shields.io/maven-central/v/com.github.pedeai/quantity-picker-view.svg)](https://search.maven.org/search?q=g:com.github.pedeai%20AND%quantity-picker-view) [![Download](https://api.bintray.com/packages/gdelgado/android/quantity-picker-view/images/download.svg)](https://bintray.com/gdelgado/android/quantity-picker-view/_latestVersion) ![Bintray](https://img.shields.io/bintray/dt/gdelgado/android/quantity-picker-view)
 
 ## Usage
 Check out the __sample__ module where you can find a few examples of how to create it by `xml`.
@@ -37,7 +37,7 @@ Attributes accepted in xml:
 
 Example:
 ```xml
-com.github.guilhe.views.QuantityPickerView
+com.github.pedeai.views.QuantityPickerView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:textLabelFont="@font/permanentmarker_regular"
@@ -53,7 +53,7 @@ com.github.guilhe.views.QuantityPickerView
 - [androidx.appcompat:appcompat](https://developer.android.com/jetpack/androidx/releases/appcompat) (for ResourcesCompat.getFont())
 
 ## Bugs and Feedback
-For bugs, questions and discussions please use the [Github Issues](https://github.com/GuilhE/QuantityPickerView/issues).
+For bugs, questions and discussions please use the [Github Issues](https://github.com/pedeai/QuantityPickerView/issues).
 
  
 ## LICENSE

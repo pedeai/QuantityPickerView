@@ -8,7 +8,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.github.guilhe.quantitypicker.sample"
+        applicationId "com.github.pedeai.quantitypicker.sample"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 3
