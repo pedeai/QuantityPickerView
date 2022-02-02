@@ -41,10 +41,12 @@ class QuantityPickerView : View {
     private val defaultMaxWidth = 200
     private val defaultMaxAlpha = 255
     private val defaultBackgroundColor = Color.rgb(0xE5, 0xF0, 0xC7)
+    private val defaultTextColor = Color.BLACK
     private var defaultInterpolator: TimeInterpolator = DecelerateInterpolator()
     private var initializing: Boolean = false
     private val darkenColorFilter: ColorFilter = PorterDuffColorFilter(0x48000000, PorterDuff.Mode.SRC_ATOP)
     private var pickerBackgroundColor: Int = 0
+    private var textColor: Int = 0
     private var labelAlpha: Int = defaultMaxAlpha
     private var isClosing: Boolean = false
     private var isAnimating: Boolean = false
@@ -115,6 +117,10 @@ class QuantityPickerView : View {
             if (pickerBackgroundColor == -1) {
                 pickerBackgroundColor = defaultBackgroundColor
             }
+            textColor = a.getColor(R.styleable.QuantityPickerView_textColor, -1)
+            if (textColor == -1) {
+                textColor = defaultBackgroundColor
+            }
             setButtonRemove(
                 a.getResourceId(
                     R.styleable.QuantityPickerView_btnRemove,
@@ -143,7 +149,7 @@ class QuantityPickerView : View {
         textLabelPaint = Paint(ANTI_ALIAS_FLAG).apply {
             isAntiAlias = true
             style = Paint.Style.FILL
-            color = Color.BLACK
+            color = textColor
             textSize = textLabelSize.toFloat()
             typeface = customTypeFace ?: this.typeface
         }
