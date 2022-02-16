@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         val listener = object : QuantityPickerView.QuantityPickerViewActionListener {
-            override fun onValueChanged(view: QuantityPickerView, value: Int) {
+            override fun onValueChanged(view: QuantityPickerView, value: Int, diff: Int) {
                 (view.parent as FrameLayout).elevation = if (value == view.min) dpToPx(0) else dpToPx(5)
             }
 

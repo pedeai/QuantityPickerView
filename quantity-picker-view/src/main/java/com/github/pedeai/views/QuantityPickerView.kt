@@ -73,7 +73,7 @@ class QuantityPickerView : View {
     private var pressedButton: Button? = null
 
     interface QuantityPickerViewActionListener {
-        fun onValueChanged(view: QuantityPickerView, value: Int)
+        fun onValueChanged(view: QuantityPickerView, value: Int, diff: Int)
 
         fun beforeStartToggle(willOpen: Boolean)
 
@@ -575,7 +575,7 @@ class QuantityPickerView : View {
                         }
                         if (value < max) {
                             value++
-                            return updateAndReturn()
+                            return updateAndReturn(1)
                         }
                     }
                     if (pressedButton != null && pressedButton!! == Button.REMOVE) {
@@ -585,7 +585,7 @@ class QuantityPickerView : View {
                             if (value == 0 && isAutoToggleEnabled && isOpen) {
                                 toggle()
                             }
-                            return updateAndReturn()
+                            return updateAndReturn(-1)
                         } else {
                             if (isAutoToggleEnabled && isOpen) {
                                 toggle()
@@ -617,9 +617,9 @@ class QuantityPickerView : View {
         return null
     }
 
-    private fun updateAndReturn(): Boolean {
+    private fun updateAndReturn(diff: Int): Boolean {
         invalidate()
-        actionListener?.onValueChanged(this, value)
+        actionListener?.onValueChanged(this, value, diff)
         return true
     }
 
@@ -659,13 +659,13 @@ class QuantityPickerView : View {
 }
 
 inline fun QuantityPickerView.addActionListener(
-    crossinline onValueChanged: (view: QuantityPickerView, value: Int) -> Unit = { _, _ -> },
+    crossinline onValueChanged: (view: QuantityPickerView, value: Int, diff: Int) -> Unit = { _, _, _ -> },
     crossinline beforeStartToggle: (isOpen: Boolean) -> Unit = { _ -> },
     crossinline onToggleFinish: (willOpen: Boolean) -> Unit = { _ -> }
 ): QuantityPickerView.QuantityPickerViewActionListener {
     val callback = object : QuantityPickerView.QuantityPickerViewActionListener {
-        override fun onValueChanged(view: QuantityPickerView, value: Int) {
-            onValueChanged.invoke(view, value)
+        override fun onValueChanged(view: QuantityPickerView, value: Int, diff: Int) {
+            onValueChanged.invoke(view, value, diff)
         }
 
         override fun beforeStartToggle(willOpen: Boolean) {

@@ -2,6 +2,12 @@
 
 ---
 
+## [1.2.7]
+
+- Added diff value to onValueChanged listener function;
+
+---
+
 ## [1.2.6]
 
 - Updated repository group;
